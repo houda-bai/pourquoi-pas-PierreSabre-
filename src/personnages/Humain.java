@@ -19,16 +19,16 @@ public class Humain {
 		return this.quantiteArgent;
 	}
 
-	public void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		this.quantiteArgent += gain;
 	}
 
-	public void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		this.quantiteArgent -= perte;
 	}
 
 	public void direBonjour() {
-		parler("Bonjour ! Je m’appelle " + this.nom + " et j’aime boire du " + this.boissonFavorite);
+		parler("Bonjour ! Je m'appelle " + this.nom + " et j'aime boire du " + this.boissonFavorite);
 	}
 
 	public void boire() {
@@ -46,7 +46,7 @@ public class Humain {
 		}
 	}
 
-	private void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println("(" + nom + ") - " + texte);
 	}
 }
