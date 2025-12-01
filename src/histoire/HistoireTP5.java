@@ -5,7 +5,7 @@ import personnages.Commercant;
 import personnages.Yakuza;
 import personnages.Ronin;
 import personnages.Samourai;
-
+import personnages.Traitre;
 public class HistoireTP5 {
 
 	public static void main(String[] args) {
@@ -29,14 +29,33 @@ public class HistoireTP5 {
 		yaku.direBonjour();
 		
 		//samourai 
-		Samourai akimoto = new Samourai("Miyamoto", "Akimoto", "saké", 80);
+		Samourai akimoto = new Samourai("Miyamoto", "Akimoto", "sake", 80);
 
 		akimoto.direBonjour();
 		marco.direBonjour();
 		akimoto.faireConnaissanceAvec(marco);
 		akimoto.listerConnaissance();
 
-		akimoto.boire("thé");
+		akimoto.boire("the");
+		
+		// traitre
+		System.out.println();
+		Traitre masako = new Traitre("Miyamoto", "Masako", "whisky", 100);
+
+		masako.faireLeGentil();
+		masako.ranconner(kumi);
+		masako.ranconner(chonin);
+		masako.ranconner(marco);
+
+		akimoto.direBonjour();
+		masako.direBonjour();
+
+		yaku.direBonjour();
+		masako.faireLeGentil();
+		masako.direBonjour();
+
+		roro.direBonjour();
+
 
 
 
