@@ -1,7 +1,7 @@
 package histoire;
 
 import personnages.Humain;
-import personnages.Commerçant;
+import personnages.Commercant;
 import personnages.Yakuza;
 import personnages.Ronin;
 
@@ -18,7 +18,7 @@ public class HistoireTP4 {
         System.out.println();
         
         //commerçant
-        Commerçant marco=new Commerçant("Marco",20);
+        Commercant marco=new Commercant("Marco",20);
         marco.direBonjour();
         marco.seFaireExtorquer();
         marco.recevoir(15);

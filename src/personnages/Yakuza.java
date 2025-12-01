@@ -2,15 +2,15 @@ package personnages;
 
 public class Yakuza extends Humain {
 	private String clan;
-	private int reputation;
+	private int reputation = 0;//lui makentch dayra le 0 hnaya la prof hiya lizadtu ana kent dayrah f limen tehtu 
+	//rename refactor un truc comme ça pour modifier le truc partt 
 
 	public Yakuza(String nom, String boissonFavorite, int argent, String clan) {
 		super(nom, boissonFavorite, argent);
 		this.clan = clan;
-		this.reputation = 0;
 	}
 
-	public void extorqer(Commerçant victime) {
+	public void extorqer(Commercant victime) {
 		parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par la ?");
 		parler(victime.getNom() + ",si tu tiens a la vie donne moi ta bourse !");
 		int argentpris = victime.seFaireExtorquer();
@@ -21,19 +21,20 @@ public class Yakuza extends Humain {
 	}
 
 	public int perdre() {
-        int perdu = getQuantiteArgent();
-        perdreArgent(perdu);
-        reputation--;
-        parler("J'ai perdu mon duel et mes " + perdu + " sous, snif... J'ai deshonore le clan de " + clan + ".");
-        return perdu;
-    }
-	 public void gagner(int gain) {
-	        gagnerArgent(gain);
-	        reputation++;
-	        parler("Ce duel m'a rapporte " + gain + " sous ! Je m'enrichis et ma reputation monte.");
-	 }
-	 
-	 public int getReputation() {
-	        return reputation;
-	 }
+		int perdu = getQuantiteArgent();
+		perdreArgent(perdu);
+		reputation--;
+		parler("J'ai perdu mon duel et mes " + perdu + " sous, snif... J'ai deshonore le clan de " + clan + ".");
+		return perdu;
+	}
+
+	public void gagner(int gain) {
+		gagnerArgent(gain);
+		reputation++;
+		parler("Ce duel m'a rapporte " + gain + " sous ! Je m'enrichis et ma reputation monte.");
+	}
+
+	public int getReputation() {
+		return reputation;
+	}
 }
